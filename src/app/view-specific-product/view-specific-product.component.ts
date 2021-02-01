@@ -24,6 +24,8 @@ export class ViewSpecificProductComponent implements OnInit {
   productId: any;
   prodName: any;
   price: any;
+  qnt:any;
+  i:any;
 
   userId: any = sessionStorage.getItem('userid');
 
@@ -31,11 +33,38 @@ export class ViewSpecificProductComponent implements OnInit {
   getData() {
     this.activatedroute.params.subscribe((param) => {
       this.id = param["id"]
-      this.productservice.getProductById(this.id).subscribe((data) => {
-        this.product = data;
-        console.log(this.product)
-      })
+
+
+  this.userservice.getMyCartDataByUserId(this.userId).subscribe((data) => {
+    this.product = data;
+    console.log(this.product)
+
+    for(this.i=0;this.i<this.product.length;this.i++)
+    {
+      if(this.product[this.i].productId == this.id)
+      {
+       
+        this.qnt =  1;
+
+        console.log("qntityyyyy"+this.qnt)
+      
+      }
+    } 
+
+        if(this.qnt == 1 )
+        {
+          alert("this product already in the cart");
+          this.router.navigate(['myCart']);
+        }
+        else{
+          this.productservice.getProductById(this.id).subscribe((data) => {
+          this.product = data;
+          this.product.quantity = this.qnt;
+          console.log(this.product)
+        })
+      }
     })
+  })
   }
 
   saveInMyCart(productId: any, prodName: any, price: any, image: any) {
