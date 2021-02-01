@@ -1,0 +1,103 @@
+<app-header></app-header>
+
+
+<!-- Start All Title Box -->
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Login Here</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End All Title Box -->
+<!-- 
+<div style="margin-top: 5%;" class=" container jumbotron  w-25">
+   
+    <div>
+        <form [formGroup]="userForm" (ngSubmit)="register()">
+
+            <table class="table table-bordered bg-light  ">
+
+                <td>
+                    <div>
+                        <label><b> Phone Number </b></label>
+                        <input class="form-control" type="number" placeholder="Enter Your Phone Number"
+                            formControlName="phoneNumber" required>
+                    </div>
+                </td>
+                <tr>
+                    <td>
+                        <div>
+                            <label> <b>Enter Password : </b></label>
+                            <input class="form-control" type="password" placeholder="Enter Your Password"
+                                formControlName="password" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                        <b>
+                            <p>New User ? <a routerLink="/register">SignUp</a></p>
+                        </b>
+                        <b>
+                            <p>Forgot Password ? <a routerLink="/forgotpass">Forgot Password</a></p>
+                        </b>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div> -->
+
+
+
+<div class="contact-box-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12">
+                <div class="contact-form-right">
+
+                    <form id="contactForm" [formGroup]="userForm" (ngSubmit)="register()">
+                      
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label><b> Phone Number </b></label>
+                                    <input type="text" class="form-control" id="name" name="name"
+                                        placeholder="Your Phone Number" formControlName="phoneNumber" required data-error="Please enter your name">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label> <b>Enter Password </b></label>
+                                    <input type="password" placeholder="Your Password" id="email" class="form-control"
+                                        name="name"  formControlName="password" required data-error="Please enter your email">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-success btn-lg btn-lg">Login</button>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <b>
+                                        <p>New User ? <a  routerLink="/register">SignUp</a></p>
+                                    </b>
+                                    <b>
+                                        <p>Forgot Password ? <a routerLink="/forgotpass">Forgot Password</a></p>
+                                    </b>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

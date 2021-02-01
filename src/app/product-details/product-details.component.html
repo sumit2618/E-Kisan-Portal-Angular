@@ -1,0 +1,145 @@
+<app-header></app-header>
+
+<div style="margin-top: 5%;" class=" container jumbotron  w-50">
+    <h3 class="text-center">Product Details</h3>
+    <div>
+
+        <table class="table table-bordered bg-light  ">
+            <tr>
+                <td>
+                    <div>
+                        <h5>Product Name : {{product.prodName}} </h5>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div>
+                        <h5>Product Brand : {{product.prodBrand}} </h5>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div>
+                        <h5>Product Description : {{product.prodDescription}} </h5>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+
+            <tr>
+                <td>
+                    <div>
+                        <h5>Price : {{product.price}} </h5>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div>
+                        <h5>Offer Price : {{product.offerPrice}} </h5>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div>
+                        <h5>Product State : {{product.prodForm}} </h5>
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div>
+                        <h5>Product Quantity : {{product.quantity}} </h5>
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div>
+                        <h5>Product Exp-Date : {{product.expDate}} </h5>
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div>
+                        <h5>Product image : <img src="../../assets/Image/{{product.image}}" alt="{{product.image}}" height="150px" width="50%"
+                                class="card-img-top" style="cursor:pointer;"> </h5>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div>
+                        <h5>Product Size Pack : {{product.sizePack}} </h5>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div>
+                        <h5>Product Organic : {{product.organic}} </h5>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div>
+                        <h5>Product Color : {{product.color}} </h5>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div>
+                        <h5>Product State Of Origin : {{product.stateOrigin}} </h5>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div>
+                        <h5>Product Model No : {{product.modelNo}} </h5>
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div>
+                        <h5>Product Power Source : {{product.powerSource}} </h5>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <form [formGroup]="form">
+                        <input type="hidden" formControlName="id">
+                        <button type="submit" [routerLink]="['/']"
+                            class="btn btn-primary btn-lg btn-block">Back</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

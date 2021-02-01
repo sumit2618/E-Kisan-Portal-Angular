@@ -1,0 +1,177 @@
+<app-header></app-header>
+
+<div style="margin-top: 5%; " class=" container jumbotron  w-50">
+
+    <h3 style="text-align: center; margin-top:10px ">Enter Product Details</h3><br>
+    <form [formGroup]="form">
+        <table class="table table-bordered bg-light  ">
+
+            <tr>
+                <td>
+                    <div>
+                        <b> Caytegory Id : </b>
+                        <input class="form-control" type="number" placeholder="Enter Category Id"
+                            formControlName="categoryId" required>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div>
+                        <b> Product Name : </b>
+                        <input class="form-control" type="text" placeholder="Enter Product Name"
+                            formControlName="prodName" required>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <b>Product Brand : </b>
+                        <input class="form-control" type="text" placeholder="Enter Product Brand Name"
+                            formControlName="prodBrand" required>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <b>Product Description: </b>
+                        <textarea class="text-area" formControlName="prodDescription"></textarea>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div>
+                        <b>Price :</b>
+                        <input class="form-control" type="text" placeholder="Enter Product Price"
+                            formControlName="price" required>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div>
+                        <b>Offer Price :</b>
+                        <input class="form-control" type="text" placeholder="Enter Offer Price"
+                            formControlName="offerPrice" required>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div>
+                        <b>Product State : </b>
+                        <input class="form-control" type="text" placeholder="Enter State Of Product "
+                            formControlName="prodForm">
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div>
+                        <b>Quantity : </b>
+                        <input class="form-control" type="text" placeholder="Enter Product Quantity"
+                            formControlName="quantity">
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div>
+                        <b>Expiary Date : </b>
+                        <input class="form-control" type="date" placeholder="Enter Expiary Date Of Product "
+                            formControlName="expDate">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <b>Pack Size : </b>
+                        <input class="form-control" type="text" placeholder="Enter Size Of Pack "
+                            formControlName="sizePack">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div>
+                        <b>Organic/Inorganic : </b>
+                        <input class="form-control" type="text" placeholder="Enter Type of Product  "
+                            formControlName="organic">
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div>
+                        <b>Color : </b>
+                        <input class="form-control" type="text" placeholder="Enter Product color "
+                            formControlName="color">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div>
+                        <b>State Of Origin: </b>
+                        <input class="form-control" type="text" placeholder="Enter State of Origin  "
+                            formControlName="stateOrigin">
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div>
+                        <b>Model No: </b>
+                        <input class="form-control" type="text" placeholder="Enter Model Number  "
+                            formControlName="modelNo">
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div>
+                        <b>Source of Power: </b>
+                        <input class="form-control" type="text" placeholder="Enter Source of Power"
+                            formControlName="powerSource">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div>
+                        <b>Image : </b>
+                        <input type="file" class="form-control" (change)="onFileChanged($event)">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="form-control" style="margin-right: 15%;" type="submit" (click)="update()"
+                        class="btn btn-lg btn-success">Register</button>
+                    <button class="form-control" type="reset" class="btn btn-lg btn-danger">Clear</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
